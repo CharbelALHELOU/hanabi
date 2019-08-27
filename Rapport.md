@@ -2,10 +2,7 @@
 ### **Charbel ALHELOU et Luc LAPORTE**
 -------------------------------------------------
 # **I- Statistiques de l'AI Cheater**
-  Pour évaluer la performance de l’AI Cheater nous avons ecrit l’algo `statistic.py` .
-  Cette algorithme nous permet a travers une itération de 1000 parties de tirer quelques chiffres significatifs, par exemple le score maximal et minimal, ainsi que la moyenne des scores.
-  Mais pour approfondir notre étude, nous avons apporté quelques modifications à cette algorithme, en effet on a cherché à comprendre les raisons qui empêche l'AI d’avoir un score maximal. Pour cela, l’algorithme affiche désormais la répartition des scores, celle du nombre de jetons rouges, le nombre de fois où l’AI s’est défaussé d’un 5 et ou le deck s’est épuisé.
-
+  Pour évaluer la performance de l’AI Cheater nous avons écrit l’algorithme statistic.py . Cette algorithme nous permet a travers une itération de 1000 parties de récupérer les performances de notre Ai, par exemple le score maximal et minimal, ainsi que la moyenne des scores. Mais pour approfondir notre étude, nous avons apporté quelques modifications à cette algorithme. En effet nous avons cherché à comprendre les raisons qui empêche l'AI d’avoir un score maximal. Pour cela, l’algorithme affiche désormais la répartition des scores, celle du nombre de jetons rouges, le nombre de fois où l’AI s’est défaussé d’un 5 et quand le deck s’est épuisé. 
   L’execution de ce programme pour l’AI cheater affiche:
 
   ![statAI](https://github.com/CharbelALHELOU/hanabi/blob/master/stat/testAI.png)
@@ -18,25 +15,15 @@
 
   `Le score moyen est de 24.814`
 
-  Ces chiffres montrent une grande performance de l’algorithme, non étonnante puisque en fin de compte il ne respecte pas les règles du jeu.
-  On peut aussi remarquer la répartition des scores affichée par le diagramme et le tableau suivants:
-
+  Ces résultats montrent une grande performance de l’algorithme, non étonnante, puisque il ne respecte pas les règles du jeu. On peut aussi remarquer la répartition des scores affichée par le diagramme et le tableau suivants: 
   | Scores | 20 | 21 | 22 | 23 | 24 | 25 |
   | --- | --- | --- | --- | --- | --- | --- |
   | Apparition | 1 | 8 | 13 | 23 | 64 | 891 |
 
   ![graphAI](https://github.com/CharbelALHELOU/hanabi/blob/master/stat/graph1.png)
 
-  La répartition des scores témoigne de la fiabilité de l’algorithme a marqué de hauts  scores à un grand nombre de reprises.
-
-  D'autre part, on a essayé de s'intéresser aux causes derière les 10.9% de scores imparfaits.
-
-  D’abord on a tenté de voire si l’AI terminait une parti à cause de 3 jetons rouge et on s'est rendu compte que le programme ne commettait une erreur et durant toutes les parties le nombre de jetons rouge demeure zéro.
-  Les deux causes possibles restantes qui peuvent faire que la partie se termine avant d’atteindre les 25 points est l'AI s’est défaussé d’une carte importante (dans notre cas on s'intéresse au 5) ou il ne reste plus de cartes dans le deck.
-  Dans notre cas, on retrouve que l’AI se défausse à 37 reprises d’un cinq sur les 109 parties incomplète. Donc sur ⅓ de ces parties l’AI s’est retrouvé obligé de se défausser d’un cinq (alors qu’elle sait que c’en est un) et cela parce que il est rester beaucoup trop longtemps passif (sans clue sur cette carte et injouable) dans sa main.
-  Ainsi, un probleme peut juste être la distribution des cartes.
-  Le nombre de fois ou le deck s'épuise ( 412 fois ) vient soutenir ce propos.
-  On le voit dans la partie suivante, tiree d'un test de 1000 parties:
+  La répartition des scores témoigne de la fiabilité de l’algorithme a réalisé des scores élevés à un grand nombre de reprises. Mais l'expérience montre que la moyenne quant à elle reste au voisinage proche des 24.8 et ne touche que rarement les 24.9 . Donc on a essayé de s'intéresser aux cause induisant les 10.9% de scores imparfaits. 
+D’abord on a tenté de voir si l’AI terminait une partie suite à l’apparition de 3 jetons rouge et on s'est rendu compte que le programme ne commet aucune erreur et à chaque parties le nombre de jetons rouge reste nul. Les deux causes possibles restantes qui peuvent faire que la partie se termine avant d’atteindre les 25 points est l'AI s’est défaussé d’une carte importante (dans notre cas on s'intéresse au 5) ou il ne reste plus de cartes dans le deck. Dans notre cas, on retrouve que l’AI se défausse à 37 reprises d’un cinq sur les 109 parties incomplète. Donc sur ⅓ de ces parties l’AI s’est retrouvé obligé de se défausser d’un cinq (alors qu’elle sait que c’en est un) et cela parce que il est rester beaucoup trop longtemps passif (sans indice sur cette carte et injouable) dans sa main. Ainsi, un problème peut être le fait qu’une partie dur beaucoup trop longtemps. Le nombre de fois ou le deck s'épuise ( 412 fois ) vient soutenir ce propos. On le voit dans la partie suivante, tirée d'un test de 1000 parties: 
 
   ![endgame](https://github.com/CharbelALHELOU/hanabi/blob/master/stat/endgame.png)
 
@@ -96,9 +83,9 @@
 ## **La stratégie**
   Cette IA s'appelle `recommendation_ai.py`
 
-  Cette IA se base sur le jeu du hat guessing, présenté sur le pdf : https://sites.google.com/site/rmgpgrwc/research-papers/Hanabi_final.pdf?attredirects=1. On attribue à chaque joueur une valeur correspondant au coup que l'on veut qu'il effectue. On fait la somme de ces numéros sur tous les joueurs visibles et cela nous donne un code correspondant à l'indice que l'on doit donner. Chaque joueur sait interpréter cet indice comme consigne individuelle car il voit les valeurs des autres joueurs et en déduit la sienne.
+  Cette IA se base sur le jeu du hat guessing, présenté sur le pdf : https://sites.google.com/site/rmgpgrwc/research-papers/Hanabi_final.pdf?attredirects=1. On attribue à chaque joueur une valeur correspondant au coup que l'on veut qu'il effectue. On fait la somme de ces numéros sur tous les joueurs visibles et cela nous donne un code correspondant à l'indice que l'on doit donner. Chaque joueur sait interpréter cet indice comme une consigne individuelle car il voit les valeurs des autres joueurs et en déduit la sienne.
 
-  Chaque joueur se base sur la valeur de son et joue celon les priorités suivantes :
+  Chaque joueur se base sur la valeur de son jeu et joue selon les priorités suivantes :
 
   Si la recommendation la plus récente était de jouer une carte et qu'aucune carte n'a été jouée depuis le dernier indice, jouer la carte recommandée.
   Si la recommendation la plus récente était de jouer une carte et qu'une carte a été jouée depuis le dernier indice, et que les joueurs ont moins de 2 jetons rouges, jouer la carte recommandée.

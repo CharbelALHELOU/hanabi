@@ -28,20 +28,19 @@
   ![graphAI](https://github.com/CharbelALHELOU/hanabi/blob/master/stat/graph1.png)
 
   La répartition des scores témoigne de la fiabilité de l’algorithme a marqué de hauts  scores à un grand nombre de reprises.
-  Mais l'expérience montre que la moyenne quant à elle reste au voisinage proche des 24.8 et ne touche que rarement les 24.9 .
-  Donc on a essayé de s'intéresser aux cause induisants les 10.9% de scores imparfaits.
+
+  D'autre part, on a essayé de s'intéresser aux causes derière les 10.9% de scores imparfaits.
 
   D’abord on a tenté de voire si l’AI terminait une parti à cause de 3 jetons rouge et on s'est rendu compte que le programme ne commettait une erreur et durant toutes les parties le nombre de jetons rouge demeure zéro.
-  Les deux causes possibles restantes qui peuvent faire que la partie se termine avant d’atteindre les 25 points est l'AIR s’est défaussé d’une carte importante (dans notre cas on s'intéresse au 5) ou il ne reste plus de cartes dans le deck.
+  Les deux causes possibles restantes qui peuvent faire que la partie se termine avant d’atteindre les 25 points est l'AI s’est défaussé d’une carte importante (dans notre cas on s'intéresse au 5) ou il ne reste plus de cartes dans le deck.
   Dans notre cas, on retrouve que l’AI se défausse à 37 reprises d’un cinq sur les 109 parties incomplète. Donc sur ⅓ de ces parties l’AI s’est retrouvé obligé de se défausser d’un cinq (alors qu’elle sait que c’en est un) et cela parce que il est rester beaucoup trop longtemps passif (sans clue sur cette carte et injouable) dans sa main.
-  Ainsi, un probleme peut etre le fait qu’une partie dur beaucoup trop longtemps.
+  Ainsi, un probleme peut juste être la distribution des cartes.
   Le nombre de fois ou le deck s'épuise ( 412 fois ) vient soutenir ce propos.
   On le voit dans la partie suivante, tiree d'un test de 1000 parties:
 
   ![endgame](https://github.com/CharbelALHELOU/hanabi/blob/master/stat/endgame.png)
 
-  En conclusion à ces statistiques, les performances de l'AI (malgré sa stratégie) restent impressionnantes. Mais le faite que cette AI cherche la meilleur carte à jouer dans ses cartes en priorité fait que le jeu arrive dans 10.9% a un état bloqué ou les 25 points ne sont plus faisable.
-  On peut peut etre ameliorer encore plus les performance de cette AI en lui permettant de choisir la meilleur carte parmi toute les cartes des joeurs et de joeur en fonction.
+
 
 # **II- AI aléatoire**
   Après ces quelques statistiques, on a essayé de développer un programme naïf qui joue aléatoirement.
@@ -119,6 +118,8 @@
   La partie continue même quand le deck est épuisé.
 
   ![error](https://github.com/CharbelALHELOU/hanabi/blob/master/stat/error.png)
+
+  Donc des parties qui rencontrent cette erreur peuvent influencer la moyenne
 
 
 # **Conclusion**

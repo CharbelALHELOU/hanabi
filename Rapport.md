@@ -8,7 +8,7 @@
 
   L’execution de ce programme pour l’AI cheater affiche:
 
-  ![statAI](https://github.com/CharbelALHELOU/hanabi/blob/master/statistiques/testAI.png)
+  ![statAI](https://github.com/CharbelALHELOU/hanabi/blob/master/stat/testAI.png)
 
   Une première observation peut être faite sur les scores en effet,
 
@@ -25,7 +25,7 @@
   | --- | --- | --- | --- | --- | --- | --- |
   | Apparition | 1 | 8 | 13 | 23 | 64 | 891 |
 
-  ![graphAI](https://github.com/CharbelALHELOU/hanabi/blob/master/statistiques/graph1.png)
+  ![graphAI](https://github.com/CharbelALHELOU/hanabi/blob/master/stat/graph1.png)
 
   La répartition des scores témoigne de la fiabilité de l’algorithme a marqué de hauts  scores à un grand nombre de reprises.
   Mais l'expérience montre que la moyenne quant à elle reste au voisinage proche des 24.8 et ne touche que rarement les 24.9 .
@@ -38,7 +38,7 @@
   Le nombre de fois ou le deck s'épuise ( 412 fois ) vient soutenir ce propos.
   On le voit dans la partie suivante, tiree d'un test de 1000 parties:
 
-  ![endgame](https://github.com/CharbelALHELOU/hanabi/blob/master/statistiques/endgame.png)
+  ![endgame](https://github.com/CharbelALHELOU/hanabi/blob/master/stat/endgame.png)
 
   En conclusion à ces statistiques, les performances de l'AI (malgré sa stratégie) restent impressionnantes. Mais le faite que cette AI cherche la meilleur carte à jouer dans ses cartes en priorité fait que le jeu arrive dans 10.9% a un état bloqué ou les 25 points ne sont plus faisable.
   On peut peut etre ameliorer encore plus les performance de cette AI en lui permettant de choisir la meilleur carte parmi toute les cartes des joeurs et de joeur en fonction.
@@ -55,7 +55,7 @@
   En testant cette AI avec l’algorithme de statistiques du paragraphe précédent on obtient les résultats :
 
 
-  ![testR](https://github.com/CharbelALHELOU/hanabi/blob/master/statistiques/oldRandom.png)
+  ![testR](https://github.com/CharbelALHELOU/hanabi/blob/master/stat/oldRandom.png)
 
   Et on note les chiffres suivants:
 
@@ -82,14 +82,14 @@
   | --- | --- | --- | --- | --- | --- | --- | --- | --- | -- |
   | Apparition | 335 | 302 | 202 | 102 | 35 | 19 | 3 | 1 | 1 |
 
-  ![graph2](https://github.com/CharbelALHELOU/hanabi/blob/master/statistiques/graph2.png)
+  ![graph2](https://github.com/CharbelALHELOU/hanabi/blob/master/stat/graph2.png)
 
 # **III-AI Direct**
   Cette AI est présente dans le fichier `ai_direct`.
 
   Il fonctionne machinalement et joue l'indice qu'on lui donne.En le testant avec l'algorithme des statistiques on a les résultats suivants :
 
-  ![testDirect](https://github.com/CharbelALHELOU/hanabi/blob/master/statistiques/statDirect.png)
+  ![testDirect](https://github.com/CharbelALHELOU/hanabi/blob/master/stat/statDirect.png)
 
   Donc cette manière de jouer n'est pas du tout pertinante, parce que si l'AI reçoit un indice sur un 5 il va le jouer tout de suite.Ce qui explique les chiffres obtenus.
 
@@ -109,16 +109,16 @@
 ## **Statistiques**
   Sur 1000 parties:
 
-    ![stat1](https://github.com/CharbelALHELOU/hanabi/blob/master/stat/stat1.png)
+  ![stat1](https://github.com/CharbelALHELOU/hanabi/blob/master/stat/stat1.png)
 
   On remarque que l'AI a une moyenne légerement inférieur à celle marquée dans le document.
 
-    ![stat2](https://github.com/CharbelALHELOU/hanabi/blob/master/stat/stat2.png)
+  ![stat2](https://github.com/CharbelALHELOU/hanabi/blob/master/stat/stat2.png)
 
   Une expliquation possible de cette différence est l'erreur suivante que nous avons rencontré:
   La partie continue même quand le deck est épuisé.
 
-    ![error](https://github.com/CharbelALHELOU/hanabi/blob/master/stat/error.png)
+  ![error](https://github.com/CharbelALHELOU/hanabi/blob/master/stat/error.png)
 
 
 # **Conclusion**

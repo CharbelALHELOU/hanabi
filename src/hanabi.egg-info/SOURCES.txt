@@ -1,9 +1,15 @@
 setup.py
 hanabi/__init__.py
 hanabi/ai.py
+hanabi/ai_random.py
+hanabi/ai_random2.py
 hanabi/ascii_art.py
+hanabi/autosave.py
+hanabi/basic_stats.py
 hanabi/deck.py
 hanabi/hanabi
+hanabi/recommendation_ai.py
+hanabi/statistic.py
 hanabi/test_deck.py
 hanabi.egg-info/PKG-INFO
 hanabi.egg-info/SOURCES.txt

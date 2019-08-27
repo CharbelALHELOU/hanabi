@@ -1,3 +1,12 @@
+
+"""
+Cette AI suit la startegie du chapeau
+"""
+
+
+
+
+
 import itertools
 from hanabi.ai import AI
 import sys 

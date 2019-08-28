@@ -15,10 +15,7 @@
 
   `Le score moyen est de 24.814`
 
-  Ces résultats montrent une grande performance de l’algorithme, non étonnante, puisque il ne respecte pas les règles du jeu. On peut aussi remarquer la répartition des scores affichée par le diagramme et le tableau suivants: 
-  | Scores | 20 | 21 | 22 | 23 | 24 | 25 |
-  | --- | --- | --- | --- | --- | --- | --- |
-  | Apparition | 1 | 8 | 13 | 23 | 64 | 891 |
+  Ces résultats montrent une grande performance de l’algorithme, non étonnante, puisque il ne respecte pas les règles du jeu. On peut aussi remarquer la répartition des scores affichée par le diagramme suivant : 
 
   ![graphAI](https://github.com/CharbelALHELOU/hanabi/blob/master/stat/graph1.png)
 

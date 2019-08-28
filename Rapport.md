@@ -66,6 +66,8 @@ D’abord on a tenté de voir si l’AI terminait une partie suite à l’appari
   | Apparition | 335 | 302 | 202 | 102 | 35 | 19 | 3 | 1 | 1 |
 
   ![graph2](https://github.com/CharbelALHELOU/hanabi/blob/master/stat/graph2.png)
+  
+  On a essaye de faire une petite etude pour ameliorer l'AI en mofdifiant les probabilite des actions mais l'algorithme demeure trop basique pour etre performant.
 
 # **III-AI Direct**
   Cette AI est présente dans le fichier `ai_direct`.

@@ -89,6 +89,9 @@ D’abord on a tenté de voir si l’AI terminait une partie suite à l’appari
   Si les joueurs ont un jeton bleu, donner un indice.
   Si la recommendation la plus récente était de défausser une carte, défausser la carte recommandée.
   Défausser la plus vieille carte de sa main (donc d'index 1).
+  
+  On a essaye de comprendre pourquoi on est pas arrive a coder cet algorithme la premier fois et on a realise une nouvelle approche qui est de conserver la valeur de chaque main pour alleger les etapes de calcul et de ne pas considerer les changements de mains des autres joueur ( la liste current_values dans l'algorithme `recommendation_ai.py` ). Notons que meme si l'indice donne ne sert plus a calculer la valeur d'une main il reste neanmoins exacte et conforme a la strategie.
+  
 ## **Statistiques**
   Sur 1000 parties:
 
